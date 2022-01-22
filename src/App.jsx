@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import Login from "./components/Login";
+import Player from "./components/Player";
 //helper
 import { getURLHashToken } from "./spotify";
 //api
@@ -38,7 +39,7 @@ function App() {
     }
   }, []);
 
-  return <div className="app">{token ? <h2>Logged In</h2> : <Login />}</div>;
+  return <div className="app">{token ? <Player spotify={spotify} /> : <Login />}</div>;
 }
 
 export default App;
