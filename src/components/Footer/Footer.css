@@ -49,6 +49,7 @@
 
 .footer .right {
   flex: 0.3;
+  color: #fff;
 }
 
 .footer .right * .MuiSlider-root {
