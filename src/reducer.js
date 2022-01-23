@@ -2,7 +2,7 @@ import * as actions from "./actions";
 
 export const initialState = {
   user: null,
-  playlist: [],
+  playlists: [],
   playing: false,
   item: null,
   token: null,
@@ -14,6 +14,9 @@ const reducer = (state = initialState, { type, payload }) => {
       return { ...state, ...payload };
 
     case actions.SET_TOKEN:
+      return { ...state, ...payload };
+
+    case actions.SET_PLAYLISTS:
       return { ...state, ...payload };
 
     default:

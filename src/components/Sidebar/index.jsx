@@ -8,8 +8,12 @@ import SidebarOption from "../SidebarOption";
 import SearchIcon from "@mui/icons-material/Search";
 import HomeIcon from "@mui/icons-material/Home";
 import LibraryMusicIcon from "@mui/icons-material/LibraryMusic";
+//redux
+import { useDataLayerValue } from "../DataLayer";
 
 function Sidebar() {
+  const [{ playlists }, dispatch] = useDataLayerValue();
+
   return (
     <div className="sidebar">
       <img src={Logo} alt="Spotify Logo" className="sidebar-logo" />
@@ -20,8 +24,9 @@ function Sidebar() {
       <strong className="sidebar-title">PLAYLISTS</strong>
       <hr />
 
-      <SidebarOption title="Rock" />
-      <SidebarOption title="R&B" />
+      {playlists?.items?.map((playlist) => {
+        <SidebarOption title={playlist.name} />;
+      })}
     </div>
   );
 }
