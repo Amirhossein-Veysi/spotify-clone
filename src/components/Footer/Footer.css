@@ -5,4 +5,52 @@
   height: 65px;
   background: #282828;
   padding: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer .icon {
+  transition: 0.2s ease-in-out;
+}
+
+.footer .icon.green {
+  color: green;
+}
+
+.footer .icon:hover {
+  transform: scale(1.2);
+}
+
+.footer .left {
+  flex: 0.3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  max-width: 300px;
+}
+
+.footer .left .album-logo {
+  width: 60px;
+  height: 60px;
+  margin-left: 20px;
+  object-fit: contain;
+}
+
+.footer .center {
+  flex: 0.4;
+  max-width: 500px;
+  padding: 0 100px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer .right {
+  flex: 0.3;
+}
+
+.footer .right * .MuiSlider-root {
+  color: green;
 }
