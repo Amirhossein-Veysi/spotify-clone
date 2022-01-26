@@ -46,6 +46,15 @@ function App() {
         });
       });
     }
+
+    spotify.searchTracks("random", { limit: 10 }).then(({ tracks }) => {
+      dispatch({
+        type: actions.SET_TRACKS,
+        payload: {
+          tracks,
+        },
+      });
+    });
   }, []);
 
   return (
